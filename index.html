@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Unfollowers</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Find out who unfollowed you? </h1>
+      <p>Made with ❤️ by <span class="typed" data-typed-items=" Akshay Singh"></span></p>
+      <div class="row">
+    <form action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
+
+        <!-- First upload button -->
+        <div class="col-md-4 mb-3">
+            <p>Upload Followers.html File</p>
+            <label for="uploadButton1" class="btn btn-primary">
+                <span id="uploadButton1Text">Choose File</span>
+                <input style="display: none;" type="file" id="uploadButton1" name="followers" onchange="updateLabelText('uploadButton1Text', this)">
+            </label>
+        </div>
+
+        <!-- Second upload button -->
+        <div class="col-md-4 mb-3">
+            <p>Upload Following.html File</p>
+            <label for="uploadButton2" class="btn btn-primary">
+                <span id="uploadButton2Text">Choose File</span>
+                <input style="display: none;" type="file" id="uploadButton2" name="following" onchange="updateLabelText('uploadButton2Text', this)">
+            </label>
+        </div>
+
+        <!-- Submit button -->
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <button class="btn btn-success submit-button" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    function updateLabelText(labelTextId, inputElement) {
+        var labelTextElement = document.getElementById(labelTextId);
+        if (inputElement.files.length > 0) {
+            labelTextElement.textContent = inputElement.files[0].name;
+        } else {
+            labelTextElement.textContent = 'Choose File';
+        }
+    }
+</script>
+
+      
+      <div class="social-links">
+        <a href="https://twitter.com/akshaysinngh" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://instagram.com/akshayysinngh" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/akshayysinngh" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/singh-akshay" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>How does it work?</h2>
+          <p>If you have reached here directly through a link and you are not sure about how to get the Followers.html and Following.html files, follow this 
+          grandma friendly tutorial I have posted on my Github. </p>
+        </div>
+
+
+      </div>
+    </section><!-- End About Section -->
+
+
+ 
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <p>If you have any questions or complaints, feel free to reach me at akshaysinghim@gmail.com.</p>
+      <div class="social-links">
+        <a href="https://twitter.com/akshaysinngh" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://instagram.com/akshayysinngh" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/akshayysinngh" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/singh-akshay" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+       Copyright  &copy;  <strong><span>Unfollowers</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/typed.js/typed.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
