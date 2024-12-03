@@ -20,3 +20,8 @@ Step-3
 Go to https://akshaysinngh.com/unfollowers/ 
 Upload followers.html, and then following.html and press the submit button.
 
+## run local
+
+1. create python venv
+2. `pip install -r requirements`
+3. python3 app.py
